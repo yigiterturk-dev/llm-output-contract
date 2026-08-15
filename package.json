@@ -1,0 +1,43 @@
+{
+  "name": "llm-output-contract",
+  "version": "0.1.0",
+  "description": "Provider-independent JSON extraction and schema validation for untrusted LLM output.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "llm-output-contract": "dist/cli.js"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test test/*.test.ts",
+    "test:cli": "node --test test/cli.test.mjs",
+    "check": "npm run lint && npm run build && npm test && npm run test:cli"
+  },
+  "engines": { "node": ">=20" },
+  "keywords": ["llm", "json-schema", "validation", "ai", "structured-output", "cli"],
+  "author": "Yigit Erturk",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moriana55/llm-output-contract.git"
+  },
+  "bugs": { "url": "https://github.com/moriana55/llm-output-contract/issues" },
+  "homepage": "https://github.com/moriana55/llm-output-contract#readme",
+  "dependencies": {
+    "ajv": "^8.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}

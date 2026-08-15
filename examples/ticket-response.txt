@@ -1,0 +1,9 @@
+The structured result is below.
+
+```json
+{
+  "id": "SUP-1042",
+  "priority": "high",
+  "summary": "Customer cannot complete checkout."
+}
+```

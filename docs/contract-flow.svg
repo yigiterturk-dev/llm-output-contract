@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">LLM output contract validation flow</title>
+  <desc id="desc">Untrusted model text passes through size, extraction, structural safety, and schema checks before application use.</desc>
+  <rect width="1200" height="360" rx="28" fill="#09121c"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <text x="54" y="62" fill="#7fa6c9" font-size="17" letter-spacing="3">LLM OUTPUT / TRUST BOUNDARY</text>
+    <g fill="#101f2e" stroke="#2f5878">
+      <rect x="54" y="110" width="180" height="150" rx="16"/>
+      <rect x="280" y="110" width="180" height="150" rx="16"/>
+      <rect x="506" y="110" width="180" height="150" rx="16"/>
+      <rect x="732" y="110" width="180" height="150" rx="16"/>
+      <rect x="958" y="110" width="188" height="150" rx="16"/>
+    </g>
+    <g font-size="19" fill="#dceaf6" text-anchor="middle">
+      <text x="144" y="170">Untrusted</text><text x="144" y="198">model text</text>
+      <text x="370" y="170">Byte +</text><text x="370" y="198">candidate limit</text>
+      <text x="596" y="170">JSON</text><text x="596" y="198">extraction</text>
+      <text x="822" y="170">Key + depth</text><text x="822" y="198">guard</text>
+      <text x="1052" y="170">Schema-valid</text><text x="1052" y="198">typed value</text>
+    </g>
+    <g stroke="#5fe0b8" stroke-width="3" fill="none">
+      <path d="M240 185H270"/><path d="M466 185H496"/><path d="M692 185H722"/><path d="M918 185H948"/>
+    </g>
+    <text x="54" y="315" fill="#8398aa" font-size="15">Errors expose paths and rules — never rejected field values.</text>
+  </g>
+</svg>
